@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/20 17:36:23 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/20 17:58:45 by sg9031           ###   ########.fr       */
+/*   Created: 2020/12/20 17:39:14 by sg9031            #+#    #+#             */
+/*   Updated: 2020/12/20 17:39:16 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+int	ft_atoi(char *str)
+{
+	int i;
+	int result;
+	int sign;
 
-# define LIBFT_H
-# include <string.h>
-
-int	ft_strlen(char *str);
-void* ft_memset(void *b, int c, size_t len);
-
-#endif
+	i = 0;
+	result = 0;
+	sign = 1;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 12))
+		i++;
+	while (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign = -sign;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + str[i] - 48;
+		i++;
+	}
+	return (sign * result);
+}

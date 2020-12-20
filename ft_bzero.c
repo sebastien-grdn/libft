@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/20 17:36:23 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/20 17:58:45 by sg9031           ###   ########.fr       */
+/*   Created: 2020/12/20 17:49:36 by sg9031            #+#    #+#             */
+/*   Updated: 2020/12/20 17:56:56 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+#include "libft.h"
 
-# define LIBFT_H
-# include <string.h>
-
-int	ft_strlen(char *str);
-void* ft_memset(void *b, int c, size_t len);
-
-#endif
+void ft_bzero(void *s, size_t n)
+{
+    ft_memset(s, 0, n);
+}

@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/20 17:36:23 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/20 17:58:45 by sg9031           ###   ########.fr       */
+/*   Created: 2020/12/20 17:45:10 by sg9031            #+#    #+#             */
+/*   Updated: 2020/12/20 18:04:32 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+#include "libft.h"
 
-# define LIBFT_H
-# include <string.h>
-
-int	ft_strlen(char *str);
-void* ft_memset(void *b, int c, size_t len);
-
-#endif
+void* ft_memset(void *b, int c, size_t len)
+{
+    unsigned char *x;
+    x = (unsigned char *)b;
+    while (len--)
+    {
+        *x++ = (unsigned char)c;
+    }
+    return (b);
+}
