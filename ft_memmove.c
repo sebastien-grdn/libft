@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/20 17:36:23 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/21 13:07:27 by sg9031           ###   ########.fr       */
+/*   Created: 2020/12/21 12:20:42 by sg9031            #+#    #+#             */
+/*   Updated: 2020/12/21 15:14:36 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+# include "libft.h"
 
-# define LIBFT_H
-# include <string.h>
+void* ft_memmove(void *dst, const void *src, size_t len)
+{
+    char* x;
+    char* y;
 
-int	ft_strlen(char *str);
-void* ft_memset(void *b, int c, size_t len);
-void* ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
-
-#endif
+    if (dst == NULL && src == NULL)
+        return (dst);
+    x = (char *) src;
+    y = (char *) dst;
+    if (x < y)
+    {
+        x += len;
+        y += len;
+        while (len--)
+            *--y = *--x;
+    } else if (x != y)
+        ft_memcpy(y, x, len);
+    return (dst);
+}
