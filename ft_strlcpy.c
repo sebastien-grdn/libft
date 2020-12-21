@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/20 16:03:03 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/21 19:12:05 by sg9031           ###   ########.fr       */
+/*   Created: 2020/12/21 15:54:56 by sg9031            #+#    #+#             */
+/*   Updated: 2020/12/21 19:17:31 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(const char *str)
-{
-	int		i;
+#include "libft.h"
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+size_t ft_strlcpy(char * dst, const char * src, size_t dstsize)
+{
+    size_t srcsize;
+
+    if (!dst || !src)
+        return (0);
+    srcsize = ft_strlen(src);
+    if (dstsize > srcsize + 1)
+        ft_memcpy(dst, src, srcsize + 1);
+    else if (dstsize != 0)
+    {
+        ft_memcpy(dst, src, dstsize - 1);
+        dst[dstsize - 1] = '\0';
+    }
+    return (srcsize);
 }
