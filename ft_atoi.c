@@ -6,20 +6,22 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 17:39:14 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/20 17:39:16 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/22 20:25:44 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+# include "libft.h"
+
+int	ft_atoi(const char *str)
 {
 	int i;
-	int result;
+	unsigned int result;
 	int sign;
 
 	i = 0;
 	result = 0;
 	sign = 1;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 12))
+	while (str[i] && ((str[i] >= 9 && str[i] <= 13) || str[i] == ' '))
 		i++;
 	while (str[i] == '+' || str[i] == '-')
 	{
@@ -27,7 +29,7 @@ int	ft_atoi(char *str)
 			sign = -sign;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (ft_isdigit(str[i]))
 	{
 		result = result * 10 + str[i] - 48;
 		i++;
