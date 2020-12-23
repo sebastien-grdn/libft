@@ -6,7 +6,7 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 17:36:23 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/23 09:52:51 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/23 10:31:52 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n);
 int ft_isprint(int c);
 int ft_isdigit(int c);
 void ft_bzero(void *s, size_t n);
+size_t ft_strlcpy(char * dst, const char * src, size_t dstsize);
 
 #endif
