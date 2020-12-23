@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/20 15:35:59 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/23 10:05:29 by sg9031           ###   ########.fr       */
+/*   Created: 2020/12/22 20:31:10 by sg9031            #+#    #+#             */
+/*   Updated: 2020/12/23 09:59:40 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+# include "libft.h"
 
-char	*ft_strdup(char *src)
+void* ft_calloc(size_t count, size_t size)
 {
-	char	*copy;
-	int		len;
-	int		i;
+    void* dst;
 
-	len = 0;
-	while (src[len])
-		len += 1;
-	if (!(copy = malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		copy[i] = src[i];
-		i++;
-	}
-	copy[i] = '\0';
-	return (copy);
+    if (!count || !size)
+    {
+
+        count = 1;
+        size = 1;
+    }
+    dst = malloc(count * size);
+    if (!dst)
+        return (NULL);
+    ft_bzero(dst, count * size);
+    return (dst);
 }
