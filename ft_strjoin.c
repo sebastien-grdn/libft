@@ -1,52 +1,34 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/23 11:45:04 by sg9031            #+#    #+#             */
+/*   Updated: 2020/12/23 11:51:59 by sg9031           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int		fn_strlen(char *str)
+#include "libft.h"
+
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
+	int total_size;
+	char* new_string;
+	int i;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*malloc_all(int size, char **strs, char *sep)
-{
-	int		i;
-	int		len;
-	char	*joined;
-
-	i = 0;
-	len = 0;
-	while (i < size - 1)
-		len += (fn_strlen(strs[i++]) + fn_strlen(sep));
-	len += (fn_strlen(strs[i]) + 1);
-	if (!(joined = malloc(sizeof(char) * len)))
+	if (!s1 || !s2)
 		return (NULL);
-	return (joined);
-}
-
-char	*ft_strjoin(int size, char **strs, char *sep)
-{
-	int		i;
-	int		j;
-	int		x;
-	char	*joined;
-
-	if (!(joined = malloc_all(size, strs, sep)))
+	total_size = ft_strlen(s1) + ft_strlen(s2);
+	if (!(new_string = malloc(total_size + 1)))
 		return (NULL);
-	x = 0;
 	i = 0;
-	while (i < size)
-	{
-		j = 0;
-		while (strs[i][j])
-			joined[x++] = strs[i][j++];
-		j = 0;
-		while (sep[j] && i < size - 1)
-			joined[x++] = sep[j++];
-		i++;
-	}
-	joined[x] = '\0';
-	return (joined);
+	while (*s1)
+		new_string[i++] = *s1++;
+	while (*s2)
+		new_string[i++] = *s2++;
+	new_string[i] = '\0';
+	return (new_string);
+
 }
