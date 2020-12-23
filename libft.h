@@ -6,7 +6,7 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 17:36:23 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/23 20:49:37 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/23 21:10:06 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ void ft_bzero(void *s, size_t n);
 size_t ft_strlcpy(char * dst, const char * src, size_t dstsize);
 char* ft_strchr(const char *s, int c);
 char *ft_substr(char const *s, unsigned int start, size_t len);
+void ft_putstr_fd(char *s, int fd);
+void ft_putchar_fd(char c, int fd);
 
 #endif
