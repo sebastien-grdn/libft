@@ -6,7 +6,7 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 17:36:23 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/23 12:13:14 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/23 20:49:37 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # define LIBFT_H
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
+
 int	ft_strlen(const char *str);
 void* ft_memset(void *b, int c, size_t len);
 void* ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
