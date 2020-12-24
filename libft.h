@@ -6,7 +6,7 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 17:36:23 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/24 10:04:11 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/24 10:47:35 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef	struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}                   t_list;
 
 int	ft_strlen(const char *str);
 void* ft_memset(void *b, int c, size_t len);
