@@ -6,7 +6,7 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 17:36:23 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/24 10:47:35 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/24 15:01:26 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,8 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 void ft_putstr_fd(char *s, int fd);
 void ft_putchar_fd(char c, int fd);
 char *ft_itoa(int n);
+void ft_lstdelone(t_list *lst, void (*del)(void *));
+t_list *ft_lstnew(void *content);
+void ft_lstclear(t_list **lst, void (*del)(void *));
 
 #endif
