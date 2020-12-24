@@ -6,14 +6,14 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 11:25:25 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/24 12:20:26 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/24 18:54:00 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    del((void *)lst->next);
-    free(lst);
+	del((void *)lst->next);
+	free(lst);
 }

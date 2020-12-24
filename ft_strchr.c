@@ -6,22 +6,22 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 13:55:56 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/20 15:19:13 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/24 19:36:56 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char* ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while (s[i])
-    {
-        if (s[i] == c)
-            return (char*) &s[i];
-        i++;
-    }
-    if (s[i] == '\0' && c == '\0')
-        return (char*) &s[i];
-    return 0;
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			return (char*)&s[i];
+		i++;
+	}
+	if (s[i] == '\0' && c == '\0')
+		return (char*)&s[i];
+	return (0);
 }

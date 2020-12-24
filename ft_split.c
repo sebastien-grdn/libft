@@ -6,11 +6,11 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 12:56:23 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/23 13:24:45 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/24 19:35:15 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 void	add_slice(char **list, int list_index, char *str, int size)
 {
@@ -82,17 +82,17 @@ int		get_list_size(char *str, char c)
 	return (list_size);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-    int		list_size;
-    char	**list;
+	int		list_size;
+	char	**list;
 
-    if (!s || !c)
-        return (NULL);
-    list_size = get_list_size((char *)s, c);
-    if (!(list = malloc(sizeof(void*) * (list_size + 1))))
+	if (!s || !c)
 		return (NULL);
-    fill_list((char *)s, c, list);
+	list_size = get_list_size((char *)s, c);
+	if (!(list = malloc(sizeof(void*) * (list_size + 1))))
+		return (NULL);
+	fill_list((char *)s, c, list);
 	list[list_size] = 0;
 	return (list);
 }

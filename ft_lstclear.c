@@ -6,21 +6,21 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 12:20:57 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/24 12:54:16 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/24 18:53:15 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-    t_list* tmp;
+	t_list *tmp;
 
-    while(*lst)
-    {
-        tmp = (*lst)->next;
-        del((*lst)->content);
-        free(*lst);
-        *lst = tmp;
-    }
+	while (*lst)
+	{
+		tmp = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		*lst = tmp;
+	}
 }

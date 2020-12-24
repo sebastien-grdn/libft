@@ -6,26 +6,26 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 15:21:20 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/20 15:23:52 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/24 19:49:28 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char* ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    int i;
-    int latest;
+	int	i;
+	int	latest;
 
-    i = 0;
-    latest = -1;
-    while (s[i])
-    {
-        if (s[i] == c)
-            latest = i;
-        i++;
-    }
-    if (s[i] == '\0' && c == '\0')
-        return (char*) &s[i];
-    else if (latest != -1)
-        return (char*) &s[latest];
-    return 0;
+	i = 0;
+	latest = -1;
+	while (s[i])
+	{
+		if (s[i] == c)
+			latest = i;
+		i++;
+	}
+	if (s[i] == '\0' && c == '\0')
+		return (char*)&s[i];
+	else if (latest != -1)
+		return (char*)&s[latest];
+	return (0);
 }

@@ -6,23 +6,23 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 11:07:41 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/24 11:12:42 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/24 19:21:20 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-    int count;
+	int count;
 
-    if (!lst)
-        return (0);
-    count = 1;
-    while (lst->next)
-    {
-        lst = lst->next;
-        count++;
-    }
-    return (count);
+	if (!lst)
+		return (0);
+	count = 1;
+	while (lst->next)
+	{
+		lst = lst->next;
+		count++;
+	}
+	return (count);
 }

@@ -6,17 +6,17 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 17:39:14 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/22 20:25:44 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/24 18:35:47 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
-	int i;
-	unsigned int result;
-	int sign;
+	int				i;
+	unsigned int	result;
+	int				sign;
 
 	i = 0;
 	result = 0;
