@@ -6,13 +6,15 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 16:03:03 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/24 19:44:31 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/25 13:41:05 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')

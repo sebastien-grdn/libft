@@ -6,13 +6,13 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 15:35:59 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/24 19:37:32 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/25 13:46:47 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*copy;
 	int		len;

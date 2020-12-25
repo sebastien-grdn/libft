@@ -6,7 +6,7 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 10:07:12 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/24 19:51:00 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/25 13:42:36 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	if ((int)start >= ft_strlen(s))
+	if (start >= ft_strlen(s))
 		len = 0;
 	s += start;
 	slen = ft_strlen(s);

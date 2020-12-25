@@ -6,11 +6,13 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 16:20:45 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/24 19:47:06 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/25 13:39:54 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	if (n == 0)
 		return (0);
