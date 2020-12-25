@@ -6,27 +6,34 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 13:25:52 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/24 18:48:54 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/25 13:07:37 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static void	size_and_sign(int n, int *size, int *sign)
+{
+	if (n < 0)
+	{
+		*sign = -1;
+		*size = 2;
+	}
+	else
+	{
+		*sign = 1;
+		*size = 1;
+	}
+}
+
+char		*ft_itoa(int n)
 {
 	int				size;
 	unsigned int	x;
 	char			*str;
 	int				sign;
 
-	size = 1;
-	if (n < 0)
-	{
-		sign = -1;
-		size += 1;
-	}
-	else
-		sign = 1;
+	size_and_sign(n, &size, &sign);
 	x = sign * n;
 	while ((x /= 10) > 0)
 		size += 1;

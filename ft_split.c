@@ -6,13 +6,13 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 12:56:23 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/24 19:35:15 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/25 13:09:47 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	add_slice(char **list, int list_index, char *str, int size)
+static void		add_slice(char **list, int list_index, char *str, int size)
 {
 	int		i;
 	char	*slice;
@@ -32,7 +32,7 @@ void	add_slice(char **list, int list_index, char *str, int size)
 	list[list_index] = slice;
 }
 
-char	**fill_list(char *str, char c, char **list)
+static char		**fill_list(char *str, char c, char **list)
 {
 	int i;
 	int list_index;
@@ -57,7 +57,7 @@ char	**fill_list(char *str, char c, char **list)
 	return (list);
 }
 
-int		get_list_size(char *str, char c)
+static int		get_list_size(char *str, char c)
 {
 	int i;
 	int x;
@@ -82,7 +82,7 @@ int		get_list_size(char *str, char c)
 	return (list_size);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	int		list_size;
 	char	**list;
