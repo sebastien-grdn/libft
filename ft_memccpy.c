@@ -6,14 +6,14 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 11:43:30 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/24 19:24:55 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/27 15:17:01 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	*ft_memccpy(
-	void *restrict dst, const void *restrict src, int c, size_t n
+	void *dst, const void *src, int c, size_t n
 )
 {
 	size_t			i;

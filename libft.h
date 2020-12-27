@@ -6,7 +6,7 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 17:36:23 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/25 13:46:55 by sg9031           ###   ########.fr       */
+/*   Updated: 2020/12/27 15:17:18 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,12 @@ t_list			*ft_lstmap(
 t_list			*ft_lstnew(void *content);
 int				ft_lstsize(t_list *lst);
 void			*ft_memccpy(
-	void *restrict dst, const void *restrict src, int c, size_t n
+	void *dst, const void *src, int c, size_t n
 );
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memcpy(
-	void *restrict dst, const void *restrict src, size_t n
+	void *dst, const void *src, size_t n
 );
 void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memset(void *b, int c, size_t len);
