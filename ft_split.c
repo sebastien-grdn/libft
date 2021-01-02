@@ -6,11 +6,12 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 12:56:23 by sg9031            #+#    #+#             */
-/*   Updated: 2020/12/25 13:09:47 by sg9031           ###   ########.fr       */
+/*   Updated: 2021/01/02 23:42:06 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static void		add_slice(char **list, int list_index, char *str, int size)
 {
@@ -23,7 +24,7 @@ static void		add_slice(char **list, int list_index, char *str, int size)
 		return ;
 	}
 	i = 0;
-	while (i <= size)
+	while (i < size)
 	{
 		slice[i] = str[i];
 		i++;
@@ -47,7 +48,7 @@ static char		**fill_list(char *str, char c, char **list)
 		{
 			if (i && string_begins != i)
 				add_slice(list, list_index++, &str[string_begins],
-					i - string_begins - 1);
+					i - string_begins);
 			string_begins = i + 1;
 		}
 		i++;
