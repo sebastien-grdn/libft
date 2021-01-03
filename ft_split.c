@@ -6,12 +6,11 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 12:56:23 by sg9031            #+#    #+#             */
-/*   Updated: 2021/01/02 23:42:06 by sg9031           ###   ########.fr       */
+/*   Updated: 2021/01/03 11:12:35 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static void		add_slice(char **list, int list_index, char *str, int size)
 {
