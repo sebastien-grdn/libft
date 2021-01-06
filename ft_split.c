@@ -6,7 +6,7 @@
 /*   By: sg9031 <sg9031@gmail.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 12:56:23 by sg9031            #+#    #+#             */
-/*   Updated: 2021/01/03 11:12:35 by sg9031           ###   ########.fr       */
+/*   Updated: 2021/01/06 16:01:03 by sg9031           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ char			**ft_split(char const *s, char c)
 	int		list_size;
 	char	**list;
 
-	if (!s || !c)
+	if (!s)
 		return (NULL);
 	list_size = get_list_size((char *)s, c);
 	if (!(list = malloc(sizeof(void*) * (list_size + 1))))
